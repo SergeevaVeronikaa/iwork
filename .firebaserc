@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "iwork-for-everyone",
+    "firebase deploy": "iwork-for-everyone",
+    "^Z": "iwork-for-everyone",
+    "iwork": "iwork-for-everyone"
+  },
+  "targets": {
+    "iwork-for-everyone": {
+      "hosting": {
+        "TARGET_NAME": [
+          "RESOURCE_IDENTIFIER"
+        ]
+      }
+    }
+  }
+}
