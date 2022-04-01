@@ -3,11 +3,15 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url 'https://kommunicate.jfrog.io/artifactory/kommunicate-android-sdk'
+        }
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
     }
 }
 
