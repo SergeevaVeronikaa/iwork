@@ -37,7 +37,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
           margin: const EdgeInsets.only(top: kDefaultPadding * 3),
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           height: 400,
-          width: 500,
+          width: 400,
           decoration: BoxDecoration(
             color: feedbacks[widget.index].color,
             borderRadius: BorderRadius.circular(10),

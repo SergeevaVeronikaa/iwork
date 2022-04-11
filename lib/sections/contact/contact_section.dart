@@ -25,13 +25,10 @@ class ContactSection extends StatelessWidget {
       child: Column(
         children: const [
           SizedBox(height: kDefaultPadding * 2.5),
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child: SectionTitle(
-              title: "Skontaktuj się ze mną",
-              subTitle: "Wypełnić formularz",
-              color: Color(0xFF07E24A),
-            ),
+          SectionTitle(
+            title: "Skontaktuj się ze mną",
+            subTitle: "Wypełnić formularz",
+            color: Color(0xFF07E24A),
           ),
           ContactBox()
         ],

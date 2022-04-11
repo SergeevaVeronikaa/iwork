@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iwork/components/section_title.dart';
 import 'package:iwork/constants.dart';
@@ -15,19 +16,19 @@ class ServiceSection extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          const FittedBox(
-            fit: BoxFit.scaleDown,
-            child: SectionTitle(
-              color: Color(0xFFFF0000),
-              title: "Oferujemy",
-              subTitle: "Nasze zalety",
-            ),
+          const SectionTitle(
+            color: Color(0xFFFF0000),
+            title: "Oferujemy",
+            subTitle: "Nasze zalety",
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: List.generate(
-                services.length, (index) => Flexible(
-                child: ServiceCard(index: index))),
+          SizedBox(
+            width: 1110,
+            child: Wrap(
+              spacing: kDefaultPadding,
+              runSpacing: kDefaultPadding,
+              children: List.generate(
+                  services.length, (index) => ServiceCard(index: index)),
+            ),
           )
         ],
       ),
