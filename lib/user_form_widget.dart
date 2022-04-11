@@ -134,7 +134,8 @@ class _UserFormWidgetState extends State<UserFormWidget> {
     contentPadding: EdgeInsets.zero,
     controlAffinity: ListTileControlAffinity.leading,
     value: isBeginner,
-    title: const Text('Potwierdzam, że zapoznałem się z informacjami o ochronie danych osobowych. Wyrażam zgodę na przetwarzanie danych Agencje Рracy Corna Forti Sp.z.o.o. zgodnie z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia'),
+    title: const Text(
+        'Potwierdzam, że zapoznałem się z informacjami o ochronie danych osobowych. Wyrażam zgodę na przetwarzanie danych Agencje Рracy Corna Forti Sp.z.o.o. zgodnie z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia'),
     onChanged: (value) => setState(() => isBeginner = value),
   );
 

@@ -17,13 +17,13 @@ class TopSection extends StatelessWidget {
       width: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
           image: AssetImage("assets/images/background.png"),
         ),
       ),
       child: Container(
         margin: const EdgeInsets.only(top: kDefaultPadding),
-        width: 1180,
+        width: 1110,
         child: Stack(
           children: [
             LogoAndBlurBox(size: size),
@@ -33,7 +33,7 @@ class TopSection extends StatelessWidget {
               child: PersonPic(),
             ),
             Positioned.fill(
-              bottom: 0,
+              //bottom: 0,
               child: Column(
                 children: [
                   Transform.translate(
