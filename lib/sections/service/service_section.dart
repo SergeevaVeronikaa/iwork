@@ -15,13 +15,16 @@ class ServiceSection extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          const SectionTitle(
-            color: Color(0xFFFF0000),
-            title: "Oferujemy",
-            subTitle: "Nasze zalety",
+          const FittedBox(
+            fit: BoxFit.fill,
+            child: SectionTitle(
+              color: Color(0xFFFF0000),
+              title: "Oferujemy",
+              subTitle: "Nasze zalety",
+            ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: List.generate(
                 services.length, (index) => ServiceCard(index: index)),
           )

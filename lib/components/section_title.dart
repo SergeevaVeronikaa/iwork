@@ -37,17 +37,27 @@ class SectionTitle extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
-                subTitle,
-                style:
-                const TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    subTitle,
+                    style:
+                    const TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
+                  ),
+                ),
               ),
-              Text(
-                title,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline2
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline2
+                        .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+                  ),
+                ),
               )
             ],
           )

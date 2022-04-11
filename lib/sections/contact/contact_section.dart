@@ -22,16 +22,21 @@ class ContactSection extends StatelessWidget {
           image: AssetImage("assets/images/bg_img_2.png"),
         ),
       ),
-      child: Column(
-        children: const [
-          SizedBox(height: kDefaultPadding * 2.5),
-          SectionTitle(
-            title: "Skontaktuj się ze mną",
-            subTitle: "Wypełnić formularz",
-            color: Color(0xFF07E24A),
+      child: Flexible(
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Column(
+            children: const [
+              SizedBox(height: kDefaultPadding * 2.5),
+              SectionTitle(
+                title: "Skontaktuj się ze mną",
+                subTitle: "Wypełnić formularz",
+                color: Color(0xFF07E24A),
+              ),
+              ContactBox()
+            ],
           ),
-          ContactBox()
-        ],
+        ),
       ),
     );
   }
@@ -61,29 +66,44 @@ class ContactBox extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SocalCard(
-                color: const Color(0xFFD9FFFC),
-                iconSrc: "assets/images/telegram_logo.png",
-                name: 'Telegram',
-                press: () {
-                  launch('https://t.me/work_in_poland888');
-                },
+              Expanded(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: SocalCard(
+                    color: const Color(0xFFD9FFFC),
+                    iconSrc: "assets/images/telegram_logo.png",
+                    name: 'Telegram',
+                    press: () {
+                      launch('https://t.me/work_in_poland888');
+                    },
+                  ),
+                ),
               ),
-              SocalCard(
-                color: const Color(0xFFFFE0E0),
-                iconSrc: "assets/images/instagram.png",
-                name: 'Instagram',
-                press: () {
-                  launch('https://www.instagram.com/vork_in_poland/');
-                },
+              Expanded(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: SocalCard(
+                    color: const Color(0xFFFFE0E0),
+                    iconSrc: "assets/images/instagram.png",
+                    name: 'Instagram',
+                    press: () {
+                      launch('https://www.instagram.com/vork_in_poland/');
+                    },
+                  ),
+                ),
               ),
-              SocalCard(
-                color: const Color(0xFFE8F0F9),
-                iconSrc: "assets/images/facebook_logo.png",
-                name: 'Facebook',
-                press: () {
-                  launch('https://www.facebook.com/profile.php?id=100078885758857');
-                },
+              Expanded(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: SocalCard(
+                    color: const Color(0xFFE8F0F9),
+                    iconSrc: "assets/images/facebook_logo.png",
+                    name: 'Facebook',
+                    press: () {
+                      launch('https://www.facebook.com/profile.php?id=100078885758857');
+                    },
+                  ),
+                ),
               ),
             ],
           ),

@@ -31,9 +31,9 @@ class _InformationCardState extends State<InformationCard> {
       hoverColor: Colors.transparent,
       child: AnimatedContainer(
         duration: duration,
-        margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
-        height: 256,
-        width: 256,
+        margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 1.5),
+        height: 240,
+        width: 240,
         decoration: BoxDecoration(
           color: services[widget.index].color,
           borderRadius: BorderRadius.circular(10),
