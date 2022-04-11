@@ -38,7 +38,9 @@ class TopSection extends StatelessWidget {
                 children: [
                   Transform.translate(
                       offset: const Offset(0, 470),
-                      child: const HireMeCard()),
+                      child: const FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: HireMeCard())),
                 ],
               ),
             ),

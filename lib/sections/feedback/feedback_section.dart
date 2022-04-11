@@ -15,17 +15,20 @@ class FeedbackSection extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          const SectionTitle(
-            title: "Feedback",
-            subTitle: "Przedstawiciele Agencji",
-            color: Color(0xFF00B1FF),
+          const FittedBox(
+            fit: BoxFit.scaleDown,
+            child: SectionTitle(
+              title: "Feedback",
+              subTitle: "Przedstawiciele Agencji",
+              color: Color(0xFF00B1FF),
+            ),
           ),
           const SizedBox(height: kDefaultPadding),
           Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: List.generate(
                 feedbacks.length,
-                    (index) => Expanded(
+                    (index) => Flexible(
                         child: FeedbackCard(index: index)),
               ),
             ),

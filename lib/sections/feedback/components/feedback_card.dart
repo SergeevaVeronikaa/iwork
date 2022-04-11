@@ -1,5 +1,6 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:iwork/models/Feedback.dart';
 
 import '../../../constants.dart';
@@ -34,7 +35,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
         duration: duration,
         margin: const EdgeInsets.only(top: kDefaultPadding * 3),
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        height: 380,
+        height: 400,
         width: 500,
         decoration: BoxDecoration(
           color: feedbacks[widget.index].color,
@@ -43,19 +44,22 @@ class _FeedbackCardState extends State<FeedbackCard> {
         ),
         child: Column(
           children: [
-            Expanded(
-              child: Transform.translate(
-                offset: const Offset(0, -55),
-                child: AnimatedContainer(
-                  duration: duration,
-                  height: 100,
-                  width: 100,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 10),
-                    boxShadow: [if (!isHover) kDefaultCardShadow],
-                    image: DecorationImage(
-                      image: AssetImage(feedbacks[widget.index].userPic),
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Transform.translate(
+                  offset: const Offset(0, -55),
+                  child: AnimatedContainer(
+                    duration: duration,
+                    height: 100,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 10),
+                      boxShadow: [if (!isHover) kDefaultCardShadow],
+                      image: DecorationImage(
+                        image: AssetImage(feedbacks[widget.index].userPic),
+                      ),
                     ),
                   ),
                 ),
