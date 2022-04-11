@@ -15,13 +15,11 @@ class AboutSectionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        child: Flexible(
-          child: Text(
-            text,
-            style: const TextStyle(
-                fontWeight: FontWeight.w200, color: kTextColor, height: 2),
-          ),
-        ),
+      child: Text(
+        text,
+        style: const TextStyle(
+            fontWeight: FontWeight.w200, color: kTextColor, height: 2),
+      ),
     );
   }
 }

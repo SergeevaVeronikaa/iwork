@@ -22,21 +22,16 @@ class ContactSection extends StatelessWidget {
           image: AssetImage("assets/images/bg_img_2.png"),
         ),
       ),
-      child: Flexible(
-        child: FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Column(
-            children: const [
-              SizedBox(height: kDefaultPadding * 2.5),
-              SectionTitle(
-                title: "Skontaktuj się ze mną",
-                subTitle: "Wypełnić formularz",
-                color: Color(0xFF07E24A),
-              ),
-              ContactBox()
-            ],
+      child: Column(
+        children: const [
+          SizedBox(height: kDefaultPadding * 2.5),
+          SectionTitle(
+            title: "Skontaktuj się ze mną",
+            subTitle: "Wypełnić formularz",
+            color: Color(0xFF07E24A),
           ),
-        ),
+          ContactBox()
+        ],
       ),
     );
   }

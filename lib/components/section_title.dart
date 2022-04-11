@@ -21,15 +21,17 @@ class SectionTitle extends StatelessWidget {
       height: 100,
       child: Row(
         children: [
-          Container(
-            margin: const EdgeInsets.only(right: kDefaultPadding),
-            padding: const EdgeInsets.only(bottom: 72),
-            width: 8,
-            height: 100,
-            color: Colors.black,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                color: color,
+          Expanded(
+            child: Container(
+              margin: const EdgeInsets.only(right: kDefaultPadding),
+              padding: const EdgeInsets.only(bottom: 72),
+              width: 8,
+              height: 100,
+              color: Colors.black,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: color,
+                ),
               ),
             ),
           ),
@@ -37,27 +39,17 @@ class SectionTitle extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Flexible(
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Text(
-                    subTitle,
-                    style:
-                    const TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
-                  ),
-                ),
+              Text(
+                subTitle,
+                style:
+                const TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
               ),
-              Flexible(
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Text(
-                    title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline2
-                        .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
-                  ),
-                ),
+              Text(
+                title,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline2
+                    .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
               )
             ],
           )

@@ -24,7 +24,6 @@ class _SocalCardState extends State<SocalCard> {
   @override
   Widget build(BuildContext context) {
     return FittedBox(
-      fit: BoxFit.fill,
       child: InkWell(
         onTap: widget.press,
         onHover: (value) {

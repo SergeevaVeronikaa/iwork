@@ -33,8 +33,8 @@ List<Feedback> feedbacks = [
 ];
 
 String review_1 =
-    'Będę Twoim osobistym doradcą w zakresie doboru wykwalifikowanych pracowników. Doradzam w zakresie legalizacji pracowników.\n\n osierhieieva@gmail.com\n +48507830446\n\n                                  Olena';
+    'Będę Twoim osobistym doradcą w zakresie doboru wykwalifikowanych pracowników. Doradzam w zakresie legalizacji pracowników.\n\n osierhieieva@gmail.com\n +48507830446\n\n                                              Olena';
 String review_2 =
-    'Udzielam wsparcia w procedurze uzyskania aktualnej wizy dla przyszłego pracownika, zezwolenia na pobyt oraz legalnej pracy w Polsce.\n\n osierhieieva@gmail.com\n +48532992442\n\n                                    Oleksii';
+    'Udzielam wsparcia w procedurze uzyskania aktualnej wizy dla przyszłego pracownika, zezwolenia na pobyt oraz legalnej pracy w Polsce.\n\n osierhieieva@gmail.com\n +48532992442\n\n                                             Oleksii';
 String review_3 =
     'Я підберу для вас вакансію від перевірених працедавців Польщі. Проконсультую з питань оформлення документів\n\n osierhieieva@gmail.com\n +48500735074\n\n                           Вероніка';

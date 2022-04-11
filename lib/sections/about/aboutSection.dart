@@ -10,12 +10,11 @@ import 'components/experience_card.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key key}) : super(key: key);
-  
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: kDefaultPadding * 2.5),
+      padding: const EdgeInsets.only(top: kDefaultPadding * 3.5),
       constraints: const BoxConstraints(maxWidth: 1110),
       child: SingleChildScrollView(
         child: Column(
@@ -25,29 +24,16 @@ class AboutSection extends StatelessWidget {
               children: const [
                 AboutTextWithSign(),
                 Expanded(
-                  child: Flexible(
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: AboutSectionText(
-                        text:
-                        " Praca dla Ukraińców w Polsce z Agencją\n Pracy Corna Forti Sp.z.o.o. jest w 100%\n legalna. Stale nadzorujemy wszystkie\n aspekty prawne, organizacyjne i jakościowe\n związane z obsługą Twojego zlecenia,\n przeprowadzamy szybką rekrutację,\n bezpłatne poszukiwania pracowników.\n Płatność jednorazowa za każdego\n wyznaczonego pracownika!",
-                      ),
-                    ),
+                  child: AboutSectionText(
+                    text:
+                    "Praca dla Ukraińców w Polsce z Agencją Pracy Corna Forti Sp.z.o.o. jest w 100% legalna. Stale nadzorujemy wszystkie aspekty prawne, organizacyjne i jakościowe związane z obsługą Twojego zlecenia, przeprowadzamy szybką rekrutację, bezpłatne poszukiwania pracowników. Płatność jednorazowa za każdego wyznaczonego pracownika!",
                   ),
                 ),
-                Flexible(
-                    child: FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: ExperienceCard(numOfExp: "08"))),
+                ExperienceCard(numOfExp: "08"),
                 Expanded(
-                  child: Flexible(
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: AboutSectionText(
-                        text:
-                        " Zapewnimy niezbędne dokumenty potrzebne\n do legalnego zatrudnienia cudzoziemców.\n Prowadzimy selekcje pracowników\n dopasowanych do indywidualnych\n zapotrzebowań Klienta. Świadczymy swoje\n usługi na terenie całej Polski. W krótkim\n czasie skierujemy do Państwa firmy\n potrzebną ilość pracowników (istnieje\n możliwość natychmiastowej rekrutacji).",
-                      ),
-                    ),
+                  child: AboutSectionText(
+                    text:
+                    "Zapewnimy niezbędne dokumenty potrzebne do legalnego zatrudnienia cudzoziemców. Prowadzimy selekcje pracowników dopasowanych do indywidualnych zapotrzebowań Klienta. Świadczymy swoje usługi na terenie całej Polski. W krótkim czasie skierujemy do Państwa firmy potrzebną ilość pracowników (istnieje możliwość natychmiastowej rekrutacji).",
                   ),
                 ),
               ],
@@ -56,30 +42,20 @@ class AboutSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Flexible(
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: MyOutlineButton(
-                      imageSrc: "assets/images/hand.png",
-                      text: "Napisz do mnie!",
-                      press: () {
-                        customLaunch('mailto:osierhieieva@gmail.com?subject=Szukam%20pracowników!&body=ВCześć!%20');
-                      },
-                    ),
-                  ),
+                MyOutlineButton(
+                  imageSrc: "assets/images/hand.png",
+                  text: "Napisz do mnie!",
+                  press: () {
+                    customLaunch('mailto:osierhieieva@gmail.com?subject=Szukam%20pracowników!&body=ВCześć!%20');
+                  },
                 ),
                 const SizedBox(width: kDefaultPadding * 1),
-                Flexible(
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: DefaultButton(
-                      imageSrc: "assets/images/download.png",
-                      text: "Pobierz zamówienie",
-                      press: () {
-                        launch('https://docs.google.com/document/d/1X4J2WWGQ-ElNLbwsyl7-oanWGoVXX5k3/edit?usp=sharing&ouid=109872749257380034220&rtpof=true&sd=true');
-                      },
-                    ),
-                  ),
+                DefaultButton(
+                  imageSrc: "assets/images/download.png",
+                  text: "Pobierz zamówienie",
+                  press: () {
+                    launch('https://docs.google.com/document/d/1X4J2WWGQ-ElNLbwsyl7-oanWGoVXX5k3/edit?usp=sharing&ouid=109872749257380034220&rtpof=true&sd=true');
+                  },
                 ),
               ],
             ),

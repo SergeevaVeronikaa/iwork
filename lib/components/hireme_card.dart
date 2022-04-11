@@ -18,46 +18,44 @@ class HireMeCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [kDefaultShadow],
       ),
-      child: Expanded(
-        child: Row(
-          children: [
-            Image.asset(
-              "assets/images/email.png",
-              height: 60,
-              width: 60,
+      child: Row(
+        children: [
+          Image.asset(
+            "assets/images/email.png",
+            height: 60,
+            width: 60,
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: SizedBox(
+              height: 80,
+              child: VerticalDivider(),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-              child: SizedBox(
-                height: 80,
-                child: VerticalDivider(),
-              ),
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  "Szukasz pracowników?",
+                  style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: kDefaultPadding / 2),
+                Text(
+                  "Dysponujemy wielką bazę kandydatów",
+                  style: TextStyle(fontWeight: FontWeight.w200),
+                )
+              ],
             ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    "Szukasz pracowników?",
-                    style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: kDefaultPadding / 2),
-                  Text(
-                    "Dysponujemy wielką bazę kandydatów",
-                    style: TextStyle(fontWeight: FontWeight.w200),
-                  )
-                ],
-              ),
-            ),
-            DefaultButton(
-              text: "Kontakt",
-              imageSrc: "assets/images/hand.png",
-              press: () {
-                customLaunch('mailto:osierhieieva@gmail.com?subject=Szukam%20pracowników!&body=Cześć!%20');
-              }
-            ),
-          ],
-        ),
+          ),
+          DefaultButton(
+            text: "Kontakt",
+            imageSrc: "assets/images/hand.png",
+            press: () {
+              customLaunch('mailto:osierhieieva@gmail.com?subject=Szukam%20pracowników!&body=Cześć!%20');
+            }
+          ),
+        ],
       ),
     );
   }

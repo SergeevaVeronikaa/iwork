@@ -6,14 +6,14 @@ import 'components/logo_blur_box.dart';
 import 'components/person_pic.dart';
 
 class TopSection extends StatelessWidget {
-  const TopSection ({Key key}) : super(key: key);
+  const TopSection({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
       alignment: Alignment.center,
-      constraints: const BoxConstraints(maxHeight: 550, minHeight: 420),
+      constraints: const BoxConstraints(maxHeight: 560, minHeight: 420),
       width: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
@@ -23,7 +23,7 @@ class TopSection extends StatelessWidget {
       ),
       child: Container(
         margin: const EdgeInsets.only(top: kDefaultPadding),
-        width: 1110,
+        width: 1180,
         child: Stack(
           children: [
             LogoAndBlurBox(size: size),
@@ -38,10 +38,7 @@ class TopSection extends StatelessWidget {
                 children: [
                   Transform.translate(
                       offset: const Offset(0, 470),
-                      child: const Flexible(
-                          child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: HireMeCard()))),
+                      child: const HireMeCard()),
                 ],
               ),
             ),
