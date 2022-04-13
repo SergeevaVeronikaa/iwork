@@ -15,35 +15,31 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: kDefaultPadding * 3.5),
+      padding: const EdgeInsets.only(top: kDefaultPadding * 3),
       constraints: const BoxConstraints(maxWidth: 1110),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Wrap(
+              runSpacing: kDefaultPadding * 2,
+              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                AboutTextWithSign(),
-                Expanded(
-                  child: FittedBox(
+                FittedBox(
+                    child: AboutTextWithSign()),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: AboutSectionText(
+                    text:
+                    " Praca dla Ukraińców w Polsce z Agencją\n Pracy Corna Forti Sp.z.o.o. jest w 100%\n legalna. Stale nadzorujemy wszystkie\n aspekty prawne, organizacyjne i jakościowe\n związane z obsługą Twojego zlecenia,\n przeprowadzamy szybką rekrutację,\n bezpłatne poszukiwania pracowników.\n Płatność jednorazowa za każdego\n wyznaczonego pracownika!",                    ),
+                ),
+                FittedBox(
                     fit: BoxFit.scaleDown,
-                    child: AboutSectionText(
-                      text:
-                      " Praca dla Ukraińców w Polsce z Agencją\n Pracy Corna Forti Sp.z.o.o. jest w 100%\n legalna. Stale nadzorujemy wszystkie\n aspekty prawne, organizacyjne i jakościowe\n związane z obsługą Twojego zlecenia,\n przeprowadzamy szybką rekrutację,\n bezpłatne poszukiwania pracowników.\n Płatność jednorazowa za każdego\n wyznaczonego pracownika!",                    ),
-                  ),
-                ),
-                Flexible(
-                  child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: ExperienceCard(numOfExp: "08")),
-                ),
-                Expanded(
-                  child: FittedBox(
-                    fit: BoxFit.fill,
-                    child: AboutSectionText(
-                      text:
-                      " Zapewnimy niezbędne dokumenty potrzebne\n do legalnego zatrudnienia cudzoziemców.\n Prowadzimy selekcje pracowników\n dopasowanych do indywidualnych\n zapotrzebowań Klienta. Świadczymy swoje\n usługi na terenie całej Polski. W krótkim\n czasie skierujemy do Państwa firmy\n potrzebną ilość pracowników (istnieje\n możliwość natychmiastowej rekrutacji).",
-                    ),
+                    child: ExperienceCard(numOfExp: "08")),
+                FittedBox(
+                  fit: BoxFit.fill,
+                  child: AboutSectionText(
+                    text:
+                    " Zapewnimy niezbędne dokumenty potrzebne\n do legalnego zatrudnienia cudzoziemców.\n Prowadzimy selekcje pracowników\n dopasowanych do indywidualnych\n zapotrzebowań Klienta. Świadczymy swoje\n usługi na terenie całej Polski. W krótkim\n czasie skierujemy do Państwa firmy\n potrzebną ilość pracowników (istnieje\n możliwość natychmiastowej rekrutacji).",
                   ),
                 ),
               ],
