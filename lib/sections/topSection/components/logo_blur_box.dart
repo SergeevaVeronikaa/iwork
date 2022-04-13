@@ -19,10 +19,11 @@ class LogoAndBlurBox extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
+        // ignore: deprecated_member_use
         TypewriterAnimatedTextKit(
         pause: const Duration(milliseconds:  1200),
-            text: const ["Telefon: +48 507 830 446          E-mail: osierhieieva@gmail.com"],
-            textStyle: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.white),
+            text: const ["Telefon: +48 507 830 446"],
+            textStyle: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.white),
             displayFullTextOnTap: true,
             stopPauseOnTap: true
     ),

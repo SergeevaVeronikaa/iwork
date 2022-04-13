@@ -21,9 +21,9 @@ class GlassContent extends StatelessWidget {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 2),
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 3),
             constraints:
-            BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.5),
+            BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.4),
             width: double.infinity,
             color: Colors.white.withOpacity(0),
             child: Column(
@@ -48,7 +48,7 @@ class GlassContent extends StatelessWidget {
                     child: Text(
                       "Agencja Pracy Tymczasowej",
                       style: TextStyle(
-                        fontSize: 60,
+                        fontSize: 45,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                         height: 1.8,

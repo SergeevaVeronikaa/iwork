@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const kTextColor = Color(0xFF707070);
 const kTextLightColor = Color(0xFF555555);
 
-const kDefaultPadding = 20.0;
+const kDefaultPadding = 25.0;
 
 final kDefaultShadow = BoxShadow(
   offset: const Offset(0, 50),
@@ -24,8 +24,6 @@ const kDefaultInputDecorationTheme = InputDecorationTheme(
 );
 
 const kDefaultOutlineInputBorder = OutlineInputBorder(
-  // Maybe flutter team need to fix it on web
-  // borderRadius: BorderRadius.circular(50),
   borderSide: BorderSide(
     color: Color(0xFFCEE4FD),
   ),
